@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.thoughtworks.wechat.R;
 import com.thoughtworks.wechat.constant.LoadState;
 import com.thoughtworks.wechat.http.entity.UserInfo;
@@ -194,8 +195,8 @@ public class MomentsListView extends ScaleListView implements AbsListView.OnScro
         }
         mUserInfo = info;
         mUserName.setText(mUserInfo.getUsername());
-//        ImageLoader.getInstance().displayImage(mUserInfo.getProfileImage(),mThemeImage);
-//        ImageLoader.getInstance().displayImage(mUserInfo.getAvatar(),mUserIcon);
+        ImageLoader.getInstance().displayImage(mUserInfo.getProfileImage(),mThemeImage);
+        ImageLoader.getInstance().displayImage(mUserInfo.getAvatar(),mUserIcon);
     }
 
     private void setListener(){
