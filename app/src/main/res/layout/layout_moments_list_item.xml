@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.thoughtworks.wechat.scaleview.ScaleLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/layout_comments_list_item_padding"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.thoughtworks.wechat.scaleview.ScaleImageView
+        android:id="@+id/sender_icon"
+        android:layout_width="@dimen/sender_icon_size"
+        android:layout_height="@dimen/sender_icon_size"
+        android:src="@drawable/default_share_image"/>
+
+    <com.thoughtworks.wechat.scaleview.ScaleView
+        android:layout_width="8dp"
+        android:layout_height="match_parent" />
+
+    <com.thoughtworks.wechat.scaleview.ScaleLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.thoughtworks.wechat.scaleview.ScaleTextView
+            android:id="@+id/sender_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sender_name_text_size"
+            android:textColor="@color/color_7d7dff"/>
+
+        <com.thoughtworks.wechat.scaleview.ScaleTextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/content_text_size"
+            android:textColor="@android:color/black"
+            android:paddingTop="@dimen/content_text_margin_top"
+            android:maxLines="4"
+            android:paddingBottom="@dimen/content_text_margin_bottom"/>
+
+        <com.thoughtworks.wechat.scaleview.ScaleTextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="@dimen/more_text_size"
+            android:textColor="@color/color_7d7dff"
+            android:text="@string/show_more" />
+
+        <com.thoughtworks.wechat.scaleview.ScaleGridView
+            android:id="@+id/images_gridView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/images_gridView_margin_top"
+            android:layout_marginBottom="@dimen/images_gridView_margin_bottom"
+            android:layout_marginRight="@dimen/images_gridView_margin_right"
+            android:horizontalSpacing="@dimen/images_gridView_spacing"
+            android:verticalSpacing="@dimen/images_gridView_spacing"
+            android:numColumns="3" />
+
+        <com.thoughtworks.wechat.scaleview.ScaleRelativeLayout
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp">
+
+            <com.thoughtworks.wechat.scaleview.ScaleTextView
+                android:id="@+id/publish_time"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_adadad"
+                android:textSize="@dimen/publishTime_text_size"/>
+
+            <com.thoughtworks.wechat.scaleview.ScaleTextView
+                android:id="@+id/from_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/publish_time"
+                android:layout_marginLeft="@dimen/fromDevice_text_margin_left"
+                android:textColor="@color/color_adadad"
+                android:textSize="@dimen/fromDevice_text_size"/>
+
+            <com.thoughtworks.wechat.scaleview.ScaleImageView
+                android:id="@+id/comments_button"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:focusable="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/comments_button_bg"/>
+
+        </com.thoughtworks.wechat.scaleview.ScaleRelativeLayout>
+
+        <com.thoughtworks.wechat.scaleview.ScaleLinearLayout
+            android:id="@+id/comments_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/detail"
+            android:orientation="vertical">
+
+            <com.thoughtworks.wechat.scaleview.ScaleListView
+                android:id="@+id/comments_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/comments_list_margin_top"
+                android:divider="@null">
+
+            </com.thoughtworks.wechat.scaleview.ScaleListView>
+
+        </com.thoughtworks.wechat.scaleview.ScaleLinearLayout>
+
+    </com.thoughtworks.wechat.scaleview.ScaleLinearLayout>
+
+</com.thoughtworks.wechat.scaleview.ScaleLinearLayout>

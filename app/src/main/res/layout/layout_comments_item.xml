@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.thoughtworks.wechat.scaleview.ScaleLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.thoughtworks.wechat.scaleview.ScaleTextView
+        android:id="@+id/comment_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_7d7dff"
+        android:textSize="@dimen/comments_item_sender_text_size"/>
+
+    <com.thoughtworks.wechat.scaleview.ScaleTextView
+        android:id="@+id/comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/comments_item_comment_text_size"/>
+</com.thoughtworks.wechat.scaleview.ScaleLinearLayout>
